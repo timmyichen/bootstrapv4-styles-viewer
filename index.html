@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <link rel="stylesheet" href="bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+  <body>
+    <div id="container">
+      <div>
+        <p>Enter the HTML for a bootstrap element below:</p>
+        <textarea id="input"></textarea><br />
+        <button id="go" class="btn btn-primary">See Styles</button>
+      </div>
+      <hr>
+      <div>
+        <p>The rendered element:</p>
+        <div id="render"></div>
+      </div>
+      <hr>
+      <div>
+        <p>The CSS styles:</p>
+        <pre class="prettyprint" id="css-out"><code class="language-css" id="styles">
+        </code></pre>
+      </div>
+    </div>
+    
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

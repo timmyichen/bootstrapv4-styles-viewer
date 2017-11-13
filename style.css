@@ -1,0 +1,30 @@
+#container {
+  max-width: 800px;
+  margin: 30px auto;
+  border: 1px solid gray;
+  padding: 20px;
+}
+
+#input {
+  height: 100px;
+  width: 700px;
+}
+
+#container div {
+  text-align: center;
+}
+
+#css-out {
+  margin: 0 auto;
+  text-align: left;
+  height: 600px;
+  width: 700px;
+}
+
+textarea {
+  font-family: "Courier New", Courier, monospace;
+}
+
+* {
+  transition: all 400ms;
+}
