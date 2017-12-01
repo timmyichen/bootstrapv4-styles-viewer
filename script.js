@@ -18,7 +18,7 @@ function showStyles(e) {
   
   var classes = target.className.split(/ /g);
   styles.innerHTML = '';
-  console.log(classes)
+  // console.log(classes)
   if (classes[0].length === 0) {
     styles.innerHTML = '(no bootstrap classes exist on this element)';
     return;
@@ -36,9 +36,25 @@ var button = document.querySelector('#go');
 var render = document.querySelector('#render');
 var styles = document.querySelector('#styles');
 var input = document.querySelector('#input');
+var loadEx = document.querySelector('#load-example');
 
 button.addEventListener('click', function() {
-  render.innerHTML = input.value;
+  render.innerHTML = input.value.replace(/^\s+|\s+$/g, '');
   var renderedElem = render.firstChild;
   renderedElem.addEventListener('mouseover', showStyles);
 });
+
+loadEx.addEventListener('click', function() {
+  input.value = `<div class="jumbotron">
+  <h1 class="display-3">Hello, world!</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for
+                  calling extra attention to featured content or information.</p>
+  <hr class="my-2">
+  <p>It uses utility classes for typography and
+     spacing to space content out within the larger container.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#!" role="button">Some action</a>
+  </p>
+</div>
+`
+})
